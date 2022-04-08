@@ -5,7 +5,7 @@ $(document).ready(function(){
       prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.svg"></button>',
       nextArrow: '<button type="button" class="slick-next"><img src="icons/right.svg"></button>',
       responsive: [
-          {
+          { 
               breakpoint: 991,
               settings: {
                   dots: false,
@@ -52,27 +52,63 @@ $('.button_mini').each(function(i) {
     })
 });
 
-$('#consultation-form').validate();
-$('#consultation form').validate({
-    rules: {
-        name: "required",
-        phone: "required",
-        email: {
-            required: true,
-            email: true,
-        }
-    },
-        messages: {
-            name: "Проверьте написание имени",
-            phone: "Введите номер телефона",
-            email: {
-                required: "Адрес почты для отратной связи",
-                email: "Неправильный формат"
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name:  {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true,
+                }
+            },
+            messages: {
+                name: {
+                    required: "Введите имя",
+                    minlength: jQuery.validator.format("Введите {0} символa")
+                },
+                phone: "Введите номер телефона",
+                email: {
+                    required: "Адрес почты для отратной связи",
+                    email: "Неправильный формат",
+                }
             }
-        }
+            
+    });
     
-});
-$('#order form').validate();
+
+};
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax ({
+            type:"POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
 
 
 
