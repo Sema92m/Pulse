@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <title>Pulse</title>
 </head>
 
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -72,7 +76,7 @@
                     </div>
 
                     <div class="advantages__icon">
-                        <img src="icons/advantages/heart.png" alt="#">
+                        <img src="icons/advantages/heart.png" alt="#" class="advantages__icon_animated">
                         Заботимся о здоровье
                         <div class="advantages__descr">
                             Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в
@@ -347,7 +351,7 @@
     <section class="rewies">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="rewies__single">
+            <div class="rewies__single animate__animated animate__fadeInUp wow">
                 <div class="rewies__img"><img src="img/feed_1.jpg" alt="feed_1"></div>
                 <div class="rewies__info">
                     <div class="rewies__names">Ирина Иванченко</div>
@@ -361,7 +365,7 @@
                 </div>
 
             </div>
-            <div class="rewies__single">
+            <div class="rewies__single animate__fadeInUp wow">
                 <div class="rewies__img"><img src="img/feed_2.jpg" alt="feed_2"></div>
                 <div class="rewies__info">
                     <div class="rewies__names">Иван Сёмочкин</div>
@@ -375,7 +379,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rewies__single">
+            <div class="rewies__single animate__fadeInUp wow">
                 <div class="rewies__img"><img src="img/feed_3.jpg" alt="feed_3"></div>
                 <div class="rewies__info">
                     <div class="rewies__names">Юлия Дашкина</div>
@@ -437,12 +441,20 @@
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up">
+    </a>
+
+
+
     <script src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
