@@ -64,24 +64,11 @@
     }
 
     .carousel {
-        padding: 10px 0;
-
-        &__inner {
-            width: 400px;
-
-            img {
-                width: 400px;
-            }
-        }
+        padding: 60px 0;
     }
 
-    .catalog {
-        &__content {
-            &_active {
-                justify-content: space-around;
-            }
-        }
-    }
+
+
 
     .footer {
         height: 450px;
@@ -162,13 +149,7 @@
         }
     }
 
-    .catalog {
-        &__content {
-            &_active {
-                justify-content: space-around;
-            }
-        }
-    }
+
 
     .footer {
         height: 350px;
@@ -189,14 +170,13 @@
 
 
 @media (max-width: 575px) {
+
     .header {
         width: 100%;
         padding: 0 15px;
 
         &__logo {
-            img {
-                width: 95%;
-            }
+            display: none;
         }
     }
 
@@ -212,6 +192,7 @@
     .promo {
         &__icons {
             margin-top: 35px;
+            width: auto;
         }
     }
 
@@ -240,13 +221,14 @@
     }
 
     .carousel {
-        padding: 75px 0;
-
+        padding: 55px 0;
+        .container {
+            padding: 0;
+        }
         &__inner {
-            width: 400px;
-
+            width: 90%;
             img {
-                width: 400px;
+                width: 90%;
             }
         }
     }
@@ -256,11 +238,13 @@
 
         &__tabs {
             margin-top: 20px;
+            
         }
 
         &__tab {
-            width: 170px;
+            width: 140px;
             height: 50px;
+            font-size: 15px;
         }
 
         &__content {
@@ -299,58 +283,38 @@
 
         &__addr {
             margin-bottom: 20px;
-
         }
     }
-
-
-
-
-    @media (max-width: 320px) {
-        .container {
-            width: 100%;
-            padding: 0 10px;
+}
+@media (max-width: 425px) {
+    .header {
+        &__logo {
+            display: none;
         }
-
-        .carousel {
-            padding: 25px 0;
-
-            &__inner {
-                width: 290px;
-
-                img {
-                    width: 290px;
-                    margin-right: 0;
-                }
-            }
+    }
+    .catalog {
+        &__tab {
+            font-size: 13px;
         }
-
-        .rewies {
-            &__single {
-                display: flex;
-                justify-content: center;
-                position: relative;
-                margin-top: 60px;
-            }
-
-            &__img {
-                height: 70px;
-                width: 70px;
-            }
+    }
+    .rewies {
+        &__single {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
         }
-
-        .footer {
-            height: 200px;
-
-            iframe {
-                display: none;
-            }
-
-            &__info {
-                width: 100%;
-                height: 200px;
-                padding: 10px 15px;
-            }
+        &__img {
+            margin: 0 auto 20px auto;
+        }
+        &__names{
+            text-align: center;
+        }
+        &__marathons {
+            text-align: center;
+        }
+        &__info {
+            text-align: justify;
         }
     }
 }

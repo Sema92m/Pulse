@@ -2,13 +2,13 @@
     padding-bottom: 80px;
 
     &__tabs {
-        margin-top: 70px;
+        margin-top: 50px;
         list-style-type: none;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
-        padding-left: 0;
+        padding:0 20px;
     }
 
     &__tab {
@@ -45,11 +45,12 @@
     &__content {
         margin-top: 60px;
         display: none;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
 
         &_active {
             display: flex;
+            justify-content: space-evenly;
 
         }
     }

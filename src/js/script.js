@@ -117,4 +117,5 @@ $('.button_mini').each(function(i) {
             $('.pageup').fadeOut();
         }
     });
+    new WOW().init();
 });
