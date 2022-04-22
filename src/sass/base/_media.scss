@@ -170,7 +170,10 @@
 
 
 @media (max-width: 575px) {
-
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
     .header {
         width: 100%;
         padding: 0 15px;
@@ -197,7 +200,18 @@
     }
 
     .advantages {
+        &__wrapper {
+            justify-content: center;
+        }
         padding: 40px 0;
+        &__icons {
+            padding: 0;
+            align-items: center;
+            flex-direction: column;
+            img {
+                margin-top: 10px;
+            }
+        }
     }
 
     .consultation {
@@ -238,10 +252,11 @@
 
         &__tabs {
             margin-top: 20px;
-            
+            padding: 0;
         }
 
         &__tab {
+            margin: 0px 1px;
             width: 140px;
             height: 50px;
             font-size: 15px;
@@ -315,6 +330,11 @@
         }
         &__info {
             text-align: justify;
+        }
+    }
+    .footer {
+        &__social-item {
+            border: none;
         }
     }
 }
